@@ -61,8 +61,8 @@ executor = FakeExecutor()
 router = IntentRouter(executor, secret=secret)
 
 order_id = router.handle(payload, sign_payload(payload, secret))
-print(order_id)                # SIM-1
-print(executor.received[0])    # OrderIntent(symbol='BTCUSDT', side=buy, ...)
+print(order_id)  # SIM-1
+print(executor.received[0])  # OrderIntent(symbol='BTCUSDT', side=buy, ...)
 ```
 
 ## 🏗️ Architecture
